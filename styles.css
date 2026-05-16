@@ -82,6 +82,18 @@ button {
   transform: translateY(0);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -191,14 +203,36 @@ button {
 }
 
 .hero {
-  width: min(100% - 32px, var(--container));
+  width: 100%;
   min-height: calc(100vh - 76px);
-  margin: 0 auto;
-  padding: 58px 0 70px;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  align-items: center;
-  gap: 58px;
+  min-height: calc(100svh - 76px);
+  margin: 0;
+  padding: 96px 24px 56px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(22, 19, 16, 0) 42%, rgba(22, 19, 16, 0.62) 100%);
+  pointer-events: none;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .eyebrow {
@@ -210,7 +244,6 @@ button {
   letter-spacing: 0.08em;
 }
 
-.hero h1,
 .section-heading h2,
 .craft-copy h2,
 .visit-copy h2,
@@ -223,33 +256,18 @@ button {
   letter-spacing: 0;
 }
 
-.hero h1 {
-  font-size: 5.6rem;
-  max-width: 640px;
-}
-
-.hero h1 span,
-.hero h1 em {
-  display: block;
-}
-
-.hero h1 em {
-  font-style: italic;
-  color: var(--accent);
-}
-
-.hero-text {
-  max-width: 560px;
-  margin: 26px 0 0;
-  color: #43382f;
-  font-size: 1.09rem;
-}
-
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 30px;
+}
+
+.hero .hero-actions {
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  margin-top: 0;
 }
 
 .button {
@@ -285,16 +303,6 @@ button {
   background: rgba(255, 255, 255, 0.5);
 }
 
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.hero-tags li,
 .status-badge {
   padding: 7px 10px;
   border: 1px solid var(--line);
@@ -305,34 +313,20 @@ button {
   font-weight: 800;
 }
 
-.hero-visual {
-  margin: 0;
-  position: relative;
+.hero .button {
+  min-width: 190px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
 }
 
-.hero-visual img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.hero .button-secondary {
+  color: var(--surface);
+  background: rgba(22, 19, 16, 0.76);
+  border-color: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
 }
 
-.hero-visual::before {
-  content: "Cannolì";
-  position: absolute;
-  left: -18px;
-  top: 24px;
-  z-index: 1;
-  padding: 8px 12px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  font-family: var(--display);
-  font-size: 1.55rem;
-  font-style: italic;
-  font-weight: 700;
-  box-shadow: 0 10px 26px rgba(55, 34, 18, 0.12);
+.hero .button-secondary:hover {
+  background: rgba(22, 19, 16, 0.9);
 }
 
 figcaption {
@@ -813,14 +807,9 @@ figcaption {
 
 @media (max-width: 980px) {
   .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-    gap: 34px;
-    padding-top: 40px;
-  }
-
-  .hero h1 {
-    font-size: 4.2rem;
+    min-height: calc(100vh - 76px);
+    min-height: calc(100svh - 76px);
+    padding: 84px 24px 44px;
   }
 
   .section-heading,
@@ -890,7 +879,6 @@ figcaption {
     text-align: center;
   }
 
-  .hero,
   .menu-section,
   .split-section,
   .craft-section,
@@ -900,11 +888,6 @@ figcaption {
     width: min(100% - 24px, var(--container));
   }
 
-  .hero h1 {
-    font-size: 3.15rem;
-  }
-
-  .hero-text,
   .slider-copy p:not(.slide-count),
   .craft-copy p:not(.eyebrow),
   .visit-copy p:not(.eyebrow) {
@@ -965,18 +948,8 @@ figcaption {
     width: 118px;
   }
 
-  .hero h1 {
-    font-size: 2.65rem;
-  }
-
-  .hero-visual::before {
-    left: 10px;
-    top: 10px;
-    font-size: 1.2rem;
-  }
-
-  .hero-tags {
-    display: grid;
+  .hero {
+    padding: 72px 18px 32px;
   }
 
   .hours-list li {
