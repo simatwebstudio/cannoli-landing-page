@@ -1,0 +1,97 @@
+{
+  "chosenArchetype": "editorial_product",
+  "reasonForArchetype": "creativeDirection.designArchetype e' auto. Cannoli e' un locale food/local con fotografie prodotto forti, obiettivo di desiderio e visita, e un tono boutique siciliana contemporanea: l'archetipo editorial_product consente una prima impressione memorabile senza trasformare la pagina in una scheda contatti. Il menu resta importante ma viene introdotto dopo l'identita e sostenuto da una sezione visuale dedicata.",
+  "headlineStrategy": "Headline breve, sensoriale e italic: 'Ricotta fresca, Sicilia a Bra'. Il titolo lega specialita, materia prima e luogo in modo immediato; il supporto chiarisce cannoli artigianali, dolci e salati, asporto e ordine online.",
+  "heroLayout": "Hero chiara e calda con logo/nav in alto, testo a sinistra e immagine reale del cannolo davanti al locale a destra. Sopra la piega ci sono solo due CTA: ordine Deliveroo e menu. Nessuna scheda operativa dominante.",
+  "aboveTheFold": {
+    "primaryMessage": "Cannoli porta a Bra cannoli artigianali, ricotta fresca e specialita siciliane dolci e salate.",
+    "ctas": [
+      "Ordina su Deliveroo",
+      "Guarda il menu"
+    ],
+    "visualFocus": "Foto hero reale con cannolo in mano e insegna Cannoli sul vetro.",
+    "excludedFromFold": [
+      "telefono",
+      "orari completi",
+      "indirizzo in forma di card",
+      "dati fiscali"
+    ]
+  },
+  "selectedContent": [
+    "Hero identitaria con promessa di prodotto",
+    "Menu completo trascritto dalle immagini disponibili",
+    "Split-image-slider per prodotti e specialita con descrizioni",
+    "Sezione artigianalita con foto del proprietario",
+    "Vieni a trovarci con orari trascritti e widget maps",
+    "Footer con contatti, indirizzo, social e dati legali"
+  ],
+  "deferredContent": [
+    "Telefono e dati legali spostati nel footer o nell'area finale",
+    "Immagini menu originali usate come supporto consultabile, non come unica fonte",
+    "Privacy e cookie non inventate: solo predisposizione documentata nel README"
+  ],
+  "rejectedPatterns": [
+    "Hero scura full-bleed con overlay pesante",
+    "Dashboard di contatti/orari sopra la piega",
+    "Sequenza generica hero/about/menu/gallery/contact",
+    "Card annidate o griglie informative fredde",
+    "Ripetizione della stessa immagine in piu' sezioni"
+  ],
+  "colorPlan": {
+    "source": "Logo bianco e nero, foto calde del locale e colori naturali dei prodotti",
+    "base": "#fff8ed",
+    "surface": "#ffffff",
+    "ink": "#161310",
+    "muted": "#6f6255",
+    "accent": "#d84f1f",
+    "accentDark": "#8f2d12",
+    "greenDetail": "#537a45",
+    "use": "Palette chiara crema con nero grafico dal logo, accenti arancio-rosso derivati da scorza, ciliegia e arancina, verde oliva come dettaglio mediterraneo."
+  },
+  "fontPlan": {
+    "display": "Cormorant Garamond italic per headline e titoli menu",
+    "body": "Inter per lettura, navigazione e prezzi",
+    "reason": "La display restituisce eleganza artigianale e richiama la firma del logo senza imitarla; Inter tiene puliti menu e dettagli operativi."
+  },
+  "imagePlan": {
+    "hero": "assets/06-hero-1778956558116-gallery.png",
+    "logo": "assets/07-logo-1778947538419-logo.jpg",
+    "slider": [
+      "assets/02-dish-1778947605887-cannolosiciliano.jpg",
+      "assets/01-dish-1778947559886-arancina.jpg",
+      "assets/04-dish-1778947670803-cassataalforno.jpg",
+      "assets/05-dish-1778947701398-irisfritte.jpg",
+      "assets/03-dish-1778947642230-parmigianasiciliana.jpg"
+    ],
+    "craft": "assets/10-other-1778947800091-fotodelproprietario.png",
+    "menuOriginals": [
+      "assets/08-menu-1778947544208-menu1.webp",
+      "assets/09-menu-1778947548270-menu2.webp"
+    ],
+    "excluded": "L'immagine orari non viene pubblicata perche' gli orari sono trascritti nel testo."
+  },
+  "sectionPlan": [
+    {
+      "id": "menu",
+      "title": "Menu completo",
+      "role": "Conversione e consultazione rapida"
+    },
+    {
+      "id": "specialita",
+      "title": "Prodotti in evidenza",
+      "role": "Split-image-slider richiesto, una immagine alla volta"
+    },
+    {
+      "id": "artigianale",
+      "title": "Fatto a mano",
+      "role": "Prova umana e artigianale con foto del proprietario"
+    },
+    {
+      "id": "visita",
+      "title": "Vieni a trovarci",
+      "role": "Orari, indirizzo, email e mappa in fondo alla pagina"
+    }
+  ],
+  "conversionStrategy": "La conversione primaria e l'ordine su Deliveroo; la secondaria e la visita in negozio. Instagram e telefono sono supporti nel footer e nella sezione finale, non protagonisti sopra la piega.",
+  "mobileStrategy": "Mobile first con hero verticale, CTA impilate solo quando serve, menu in liste compatte con prezzi allineati, slider verticale con immagine sopra e testo sotto, swipe laterale abilitato, parallax disabilitato su mobile e rispetto di prefers-reduced-motion."
+}

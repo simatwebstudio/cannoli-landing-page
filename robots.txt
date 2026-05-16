@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_inspection/
+
+Sitemap: https://cannoli-bra.it/sitemap.xml

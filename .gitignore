@@ -1,0 +1,12 @@
+_inspection/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+node_modules/
+.env
+.env.*
+chrome-profile*/
+.playwright/
+playwright-report/
+test-results/

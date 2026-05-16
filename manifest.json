@@ -1,0 +1,20 @@
+{
+  "name": "Cannolì Bra",
+  "short_name": "Cannolì",
+  "description": "Cannoli artigianali, ricotta fresca e specialità siciliane a Bra.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff8ed",
+  "theme_color": "#fff8ed",
+  "lang": "it",
+  "categories": ["food", "business"],
+  "icons": [
+    {
+      "src": "assets/07-logo-1778947538419-logo.jpg",
+      "sizes": "1200x1200",
+      "type": "image/jpeg"
+    }
+  ]
+}
