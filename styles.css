@@ -165,10 +165,27 @@ button {
 }
 
 .nav-links .nav-order {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 10px 16px;
-  color: var(--surface);
-  background: var(--ink);
+  color: #ffffff;
+  background: #00ccbc;
+  border: 1px solid #00ccbc;
   border-radius: 4px;
+}
+
+.nav-links .nav-order:hover,
+.nav-links .nav-order:focus-visible {
+  background: #00b8aa;
+  border-color: #00b8aa;
+}
+
+.nav-links .nav-order .button-brand-mark {
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;
 }
 
 .nav-links .nav-order::after {
@@ -183,23 +200,40 @@ button {
   border-radius: 4px;
   background: var(--surface);
   cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .nav-toggle span {
   display: block;
   width: 20px;
   height: 2px;
-  margin: 5px auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
   background: var(--ink);
-  transition: transform 180ms ease;
+  transform: translate(-50%, -50%);
+}
+
+.nav-toggle span:first-child {
+  transform: translate(-50%, calc(-50% - 6px));
+}
+
+.nav-toggle span:last-child {
+  transform: translate(-50%, calc(-50% + 6px));
 }
 
 .nav-toggle[aria-expanded="true"] span:first-child {
-  transform: translateY(7px) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
 }
 
 .nav-toggle[aria-expanded="true"] span:last-child {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .hero {
@@ -256,6 +290,10 @@ button {
   letter-spacing: 0;
 }
 
+#craft-title {
+  font-style: italic;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -274,6 +312,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   min-height: 48px;
   padding: 13px 20px;
   border: 1px solid var(--ink);
@@ -327,6 +366,56 @@ button {
 
 .hero .button-secondary:hover {
   background: rgba(22, 19, 16, 0.9);
+}
+
+.button-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+}
+
+.button-brand-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.button-deliveroo {
+  color: #ffffff;
+  background: #00ccbc;
+  border-color: #00ccbc;
+}
+
+.button-deliveroo:hover,
+.hero .button-deliveroo:hover {
+  background: #00b8aa;
+  border-color: #00b8aa;
+}
+
+.button-deliveroo circle {
+  fill: #00ccbc;
+}
+
+.button-deliveroo:hover circle {
+  fill: #00b8aa;
+}
+
+.button-instagram,
+.hero .button-instagram {
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 30% 107%, #fdf497 0 8%, #fd5949 34%, #d6249f 62%, #285aeb 100%);
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.button-instagram:hover,
+.hero .button-instagram:hover {
+  background:
+    radial-gradient(circle at 30% 107%, #fdf497 0 8%, #fd5949 34%, #d6249f 62%, #285aeb 100%);
+  border-color: rgba(255, 255, 255, 0.52);
 }
 
 figcaption {
@@ -441,34 +530,6 @@ figcaption {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-.menu-originals {
-  margin-top: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.6);
-}
-
-.menu-originals summary {
-  cursor: pointer;
-  padding: 16px 18px;
-  font-weight: 800;
-}
-
-.menu-original-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 0 18px 18px;
-}
-
-.menu-original-grid img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
 }
 
 .split-slider {
@@ -923,10 +984,6 @@ figcaption {
 
   .price-list b {
     color: var(--accent-dark);
-  }
-
-  .menu-original-grid {
-    grid-template-columns: 1fr;
   }
 
   .slider-copy h3 {

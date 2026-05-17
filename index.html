@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260517b" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,16 +63,26 @@
       <a class="brand" href="#top" aria-label="Cannolì home">
         <img src="assets/07-logo-1778947538419-logo.jpg" alt="Logo Cannolì" width="1200" height="1200" />
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Apri il menu">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Apri la navigazione">
+        <span></span>
         <span></span>
         <span></span>
       </button>
       <div class="nav-links" id="site-menu" data-menu>
-        <a href="#menu">Menu</a>
         <a href="#specialita">Specialità</a>
         <a href="#artigianale">Fatto a mano</a>
+        <a href="#prodotti">Prodotti</a>
         <a href="#visita">Vieni a trovarci</a>
-        <a class="nav-order" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">Ordina</a>
+        <a class="nav-order button-deliveroo" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">
+          <span class="button-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <path d="M10 34.8l22.1-5.2-6-23.2 13.2-2.9 5.2 24.1 4.1-25.3 11.4 1.9-2.7 33.1-9.9 21.3-35.1-8.3-4.2-14.7 1.9-.8z" fill="currentColor" />
+              <circle cx="31.5" cy="37.8" r="3.2" />
+              <circle cx="42.4" cy="38.8" r="3.2" />
+            </svg>
+          </span>
+          <span>Ordina</span>
+        </a>
       </div>
     </nav>
   </header>
@@ -82,55 +92,27 @@
       <h1 id="hero-title" class="sr-only">Cannolì Bra</h1>
       <img class="hero-image" src="assets/06-hero-1778956558116-gallery.png" alt="Cannolo appena farcito davanti al locale Cannolì a Bra" width="1254" height="1254" data-fallback />
       <div class="hero-actions" aria-label="Azioni principali">
-        <a class="button button-primary" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">Ordina su Deliveroo</a>
-        <a class="button button-secondary" href="https://www.instagram.com/cannolibra/" target="_blank" rel="noopener">Seguici su Instagram</a>
+        <a class="button button-primary button-deliveroo" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">
+          <span class="button-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <path d="M10 34.8l22.1-5.2-6-23.2 13.2-2.9 5.2 24.1 4.1-25.3 11.4 1.9-2.7 33.1-9.9 21.3-35.1-8.3-4.2-14.7 1.9-.8z" fill="currentColor" />
+              <circle cx="31.5" cy="37.8" r="3.2" />
+              <circle cx="42.4" cy="38.8" r="3.2" />
+            </svg>
+          </span>
+          <span>Ordina su Deliveroo</span>
+        </a>
+        <a class="button button-secondary button-instagram" href="https://www.instagram.com/cannolibra/" target="_blank" rel="noopener">
+          <span class="button-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <rect x="13" y="13" width="38" height="38" rx="11" fill="none" stroke="currentColor" stroke-width="6" />
+              <circle cx="32" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="6" />
+              <circle cx="44" cy="20" r="3.8" fill="currentColor" />
+            </svg>
+          </span>
+          <span>Seguici su Instagram</span>
+        </a>
       </div>
-    </section>
-
-    <section class="menu-section" id="menu" aria-labelledby="menu-title">
-      <div class="section-heading">
-        <p class="eyebrow">Dal salato al dolce</p>
-        <h2 id="menu-title">Il menu completo</h2>
-        <p>Due anime, come in una tavola siciliana vera: prima si comincia con fritti e rosticceria, poi si finisce con ricotta, crema e sfoglie fragranti.</p>
-      </div>
-
-      <div class="menu-layout">
-        <article class="menu-board" aria-labelledby="starter-title">
-          <h3 id="starter-title">P'accuminciari</h3>
-          <ul class="price-list">
-            <li><span><strong>Panelle e crocché</strong><small>Panino</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Panelle e crocché</strong><small>Vaschetta</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Rosticceria</strong><small>Mignon</small></span><b>€ 1,50</b></li>
-            <li><span><strong>Rosticceria</strong><small>Grande</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Arancina</strong><small>Burro, carne, spinaci o norma</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Sfincione</strong><small>Rosso o bianco</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Pasta al forno</strong><small>Vaschetta</small></span><b>€ 5,00</b></li>
-          </ul>
-        </article>
-
-        <article class="menu-board menu-board-accent" aria-labelledby="dessert-title">
-          <h3 id="dessert-title">Pi finiri</h3>
-          <ul class="price-list">
-            <li><span><strong>Cannolo</strong><small>Piccolo</small></span><b>€ 1,50</b></li>
-            <li><span><strong>Cannolo</strong><small>Grande</small></span><b>€ 3,50</b></li>
-            <li><span><strong>Cartoccio</strong></span><b>€ 2,50</b></li>
-            <li><span><strong>Ciambelle fritte</strong></span><b>€ 1,50</b></li>
-            <li><span><strong>Genovese</strong><small>Ricotta o crema</small></span><b>€ 3,00</b></li>
-            <li><span><strong>Iris</strong><small>Ricotta o crema</small></span><b>€ 3,00</b></li>
-            <li><span><strong>Millefoglie</strong></span><b>€ 2,50</b></li>
-            <li><span><strong>Treccina al forno</strong></span><b>€ 2,00</b></li>
-            <li><span><strong>Cassata al forno</strong><small>Fetta</small></span><b>€ 3,50</b></li>
-          </ul>
-        </article>
-      </div>
-
-      <details class="menu-originals">
-        <summary>Vedi le lavagne originali</summary>
-        <div class="menu-original-grid">
-          <img src="assets/09-menu-1778947548270-menu2.webp" alt="Lavagna menu salato di Cannolì con panelle, rosticceria, arancina, sfincione e pasta al forno" loading="lazy" data-fallback />
-          <img src="assets/08-menu-1778947544208-menu1.webp" alt="Lavagna menu dolce di Cannolì con cannoli, cartocci, iris e cassata al forno" loading="lazy" data-fallback />
-        </div>
-      </details>
     </section>
 
     <section class="split-section" id="specialita" aria-labelledby="specialita-title">
@@ -166,6 +148,44 @@
         <img src="assets/10-other-1778947800091-fotodelproprietario.png" alt="Il proprietario di Cannolì mentre farcisce prodotti artigianali al banco" width="1085" height="1450" loading="lazy" data-fallback />
         <figcaption>Preparazioni artigianali al banco di Cannolì.</figcaption>
       </figure>
+    </section>
+
+    <section class="menu-section" id="prodotti" aria-labelledby="prodotti-title">
+      <div class="section-heading">
+        <p class="eyebrow">Dal salato al dolce</p>
+        <h2 id="prodotti-title">I nostri prodotti</h2>
+        <p>Due anime, come in una tavola siciliana vera: prima si comincia con fritti e rosticceria, poi si finisce con ricotta, crema e sfoglie fragranti.</p>
+      </div>
+
+      <div class="menu-layout">
+        <article class="menu-board" aria-labelledby="starter-title">
+          <h3 id="starter-title">P'accuminciari</h3>
+          <ul class="price-list">
+            <li><span><strong>Panelle e crocché</strong><small>Panino</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Panelle e crocché</strong><small>Vaschetta</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Rosticceria</strong><small>Mignon</small></span><b>€ 1,50</b></li>
+            <li><span><strong>Rosticceria</strong><small>Grande</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Arancina</strong><small>Burro, carne, spinaci o norma</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Sfincione</strong><small>Rosso o bianco</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Pasta al forno</strong><small>Vaschetta</small></span><b>€ 5,00</b></li>
+          </ul>
+        </article>
+
+        <article class="menu-board menu-board-accent" aria-labelledby="dessert-title">
+          <h3 id="dessert-title">Pi finiri</h3>
+          <ul class="price-list">
+            <li><span><strong>Cannolo</strong><small>Piccolo</small></span><b>€ 1,50</b></li>
+            <li><span><strong>Cannolo</strong><small>Grande</small></span><b>€ 3,50</b></li>
+            <li><span><strong>Cartoccio</strong></span><b>€ 2,50</b></li>
+            <li><span><strong>Ciambelle fritte</strong></span><b>€ 1,50</b></li>
+            <li><span><strong>Genovese</strong><small>Ricotta o crema</small></span><b>€ 3,00</b></li>
+            <li><span><strong>Iris</strong><small>Ricotta o crema</small></span><b>€ 3,00</b></li>
+            <li><span><strong>Millefoglie</strong></span><b>€ 2,50</b></li>
+            <li><span><strong>Treccina al forno</strong></span><b>€ 2,00</b></li>
+            <li><span><strong>Cassata al forno</strong><small>Fetta</small></span><b>€ 3,50</b></li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section class="visit-section" id="visita" aria-labelledby="visit-title">
@@ -207,8 +227,26 @@
       <p class="eyebrow">Prima che finisca la ricotta</p>
       <h2 id="final-title">Scegli il tuo cannolo, poi segui il profumo.</h2>
       <div class="hero-actions">
-        <a class="button button-primary" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">Ordina online</a>
-        <a class="button button-secondary" href="https://www.instagram.com/cannolibra/" target="_blank" rel="noopener">Segui su Instagram</a>
+        <a class="button button-primary button-deliveroo" href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">
+          <span class="button-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <path d="M10 34.8l22.1-5.2-6-23.2 13.2-2.9 5.2 24.1 4.1-25.3 11.4 1.9-2.7 33.1-9.9 21.3-35.1-8.3-4.2-14.7 1.9-.8z" fill="currentColor" />
+              <circle cx="31.5" cy="37.8" r="3.2" />
+              <circle cx="42.4" cy="38.8" r="3.2" />
+            </svg>
+          </span>
+          <span>Ordina online</span>
+        </a>
+        <a class="button button-secondary button-instagram" href="https://www.instagram.com/cannolibra/" target="_blank" rel="noopener">
+          <span class="button-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" focusable="false">
+              <rect x="13" y="13" width="38" height="38" rx="11" fill="none" stroke="currentColor" stroke-width="6" />
+              <circle cx="32" cy="32" r="10" fill="none" stroke="currentColor" stroke-width="6" />
+              <circle cx="44" cy="20" r="3.8" fill="currentColor" />
+            </svg>
+          </span>
+          <span>Segui su Instagram</span>
+        </a>
       </div>
     </section>
   </main>
@@ -220,7 +258,9 @@
     </div>
     <div class="footer-links">
       <h2>Link</h2>
-      <a href="#menu">Menu</a>
+      <a href="#specialita">Specialità</a>
+      <a href="#artigianale">Fatto a mano</a>
+      <a href="#prodotti">Prodotti</a>
       <a href="#visita">Orari e mappa</a>
       <a href="https://deliveroo.it/it/menu/cuneo/bra/cannoli-via-audisio-19" target="_blank" rel="noopener">Deliveroo</a>
       <a href="https://www.instagram.com/cannolibra/" target="_blank" rel="noopener">Instagram</a>
@@ -240,6 +280,6 @@
     <p class="copyright">(c) 2026 CANNOLI' DI GIANMARCO SORRENTINO. Tutti i diritti riservati.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260517b"></script>
 </body>
 </html>

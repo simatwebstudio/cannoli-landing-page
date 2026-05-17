@@ -65,7 +65,7 @@
 
     const closeMenu = () => {
       toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Apri il menu");
+      toggle.setAttribute("aria-label", "Apri la navigazione");
       menu.classList.remove("is-open");
       document.body.classList.remove("menu-open");
     };
@@ -73,7 +73,7 @@
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!isOpen));
-      toggle.setAttribute("aria-label", isOpen ? "Apri il menu" : "Chiudi il menu");
+      toggle.setAttribute("aria-label", isOpen ? "Apri la navigazione" : "Chiudi la navigazione");
       menu.classList.toggle("is-open", !isOpen);
       document.body.classList.toggle("menu-open", !isOpen);
     });
