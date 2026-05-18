@@ -905,7 +905,7 @@ figcaption {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 860px) {
   .nav-toggle {
     display: block;
   }
@@ -939,7 +939,9 @@ figcaption {
   .nav-links .nav-order {
     text-align: center;
   }
+}
 
+@media (max-width: 760px) {
   .menu-section,
   .split-section,
   .craft-section,
